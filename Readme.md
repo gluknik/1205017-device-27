@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Nick Taran](https://up.htmlacademy.ru/htmlcss/27/user/1205017).
-* Наставник: [Малик Киров](https://htmlacademy.ru/profile/id17217).
+* Наставник: [Малик](https://htmlacademy.ru/profile/id17217).
 
 ---
 
