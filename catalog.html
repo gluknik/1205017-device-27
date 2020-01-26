@@ -32,7 +32,11 @@
         </ul>
         <section>
           <section>
-            <h2>Фильтры</h2>
+            <h2>Фильтр:</h2>
+            <section>
+              <h3>Стоимость</h3>
+              <input type="range" name="price" min="0" max="10000">
+            </section>
             <section>
               <h3>Цвет</h3>
               <ul>
@@ -53,60 +57,84 @@
             </section>
           </section>
           <section>
-            <ul>
-              <li>
-                <div>
-                  <img src="img/product1.jpg" width="360" height="379" alt="Любительская селфи-палка">
+            <div>
+              <h2>Сортировка:</h2>
+              <ul>
+                <li><button type="button">По цене</button></li>
+                <li><button type="button">По типу</button></li>
+                <li><button type="button">по популярности</button></li>
+              </ul>
+              <div>
+                <button type="button">Arrow-up</button>
+                <button type="button">Arrow-down</button>
+              </div>
+            </div>
+            <div>
+              <ul>
+                <li>
                   <div>
-                    <button type="button">В корзину</button>
-                    <button type="button">Добавить к сравнению</button>
+                    <img src="img/product1.jpg" width="360" height="379" alt="Любительская селфи-палка">
+                    <div>
+                      <button type="button">В корзину</button>
+                      <button type="button">Добавить к сравнению</button>
+                    </div>
                   </div>
-                </div>
-                <h3>
-                  <a href="">Любительская селфи-палка</a>
-                </h3>
-                <p>500 руб.</p>
-              </li>
-              <li>
-                <div>
-                  <img src="img/product2.jpg" width="360" height="379" alt="Профессиональная селфи-палка">
+                  <h3>
+                    <a href="">Любительская селфи-палка</a>
+                  </h3>
+                  <p>500 руб.</p>
+                </li>
+                <li>
                   <div>
-                    <button type="button">В корзину</button>
-                    <button type="button">Добавить к сравнению</button>
+                    <img src="img/product2.jpg" width="360" height="379" alt="Профессиональная селфи-палка">
+                    <div>
+                      <button type="button">В корзину</button>
+                      <button type="button">Добавить к сравнению</button>
+                    </div>
                   </div>
-                </div>
-                <h3>
-                  <a href="">Профессиональная селфи-палка</a>
-                </h3>
-                <p>1500 руб.</p>
-              </li>
-              <li>
-                <div>
-                  <img src="img/product3.jpg" width="360" height="379" alt="Непотопляемая селфи-палка">
+                  <h3>
+                    <a href="">Профессиональная селфи-палка</a>
+                  </h3>
+                  <p>1500 руб.</p>
+                </li>
+                <li>
                   <div>
-                    <button type="button">В корзину</button>
-                    <button type="button">Добавить к сравнению</button>
+                    <img src="img/product3.jpg" width="360" height="379" alt="Непотопляемая селфи-палка">
+                    <div>
+                      <button type="button">В корзину</button>
+                      <button type="button">Добавить к сравнению</button>
+                    </div>
                   </div>
-                </div>
-                <h3>
-                  <a href="">Непотопляемая селфи-палка</a>
-                </h3>
-                <p>2500 руб.</p>
-              </li>
-              <li>
-                <div>
-                  <img src="img/product4.jpg" width="360" height="379" alt="Селфи-палка «Следуй за мной»">
+                  <h3>
+                    <a href="">Непотопляемая селфи-палка</a>
+                  </h3>
+                  <p>2500 руб.</p>
+                </li>
+                <li>
                   <div>
-                    <button type="button">В корзину</button>
-                    <button type="button">Добавить к сравнению</button>
+                    <img src="img/product4.jpg" width="360" height="379" alt="Селфи-палка «Следуй за мной»">
+                    <div>
+                      <button type="button">В корзину</button>
+                      <button type="button">Добавить к сравнению</button>
+                    </div>
                   </div>
-                </div>
-                <h3>
-                  <a href="">Селфи-палка «Следуй за мной»</a>
-                </h3>
-                <p>4500 руб.</p>
-              </li>
-            </ul>
+                  <h3>
+                    <a href="">Селфи-палка «Следуй за мной»</a>
+                  </h3>
+                  <p>4500 руб.</p>
+                </li>
+              </ul>
+            </div>
+            <div class="pagination">
+              <span>Назад</span> <!-- Не знал в какой элемент обернуть, ибо ссылкой это может быть, когда находишься на первой странице -->
+              <ul>
+                <li>1</li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">4</a></li>
+              </ul>
+              <a href="">Вперед</a>
+            </div>
           </section>
         </section>
     </main>
