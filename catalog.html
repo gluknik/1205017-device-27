@@ -7,7 +7,9 @@
   <body>
     <header>
       <a href="index.html"><img src="img/logo-device.svg" width="164" height="36" alt="Логотип сайта Device"></a>
-      <input type="search" name="search" placeholder="Поиск по сайту">
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <input type="search" name="search" placeholder="Поиск по сайту">
+      </form>
       <ul>
         <li><a href="">Валентин Петухов</a></li>
         <li><a href="">Выйти</a></li>
@@ -18,7 +20,6 @@
         <ul>
           <li>
             <a href="">Каталог товаров</a>
-            <button type="button" aria-label="Открыть каталог товаров">+</button>
             <ul>
               <li><a href="">Виртуальная реальность</a></li>
               <li><a href="">Фитнес-браслеты</a></li>
@@ -49,30 +50,48 @@
                 <h3>Стоимость</h3>
                 <!-- Кусок ниже я взял из гиста с вопросами. Насколько я понял, input type="range" тут не поможет, так как в этом элементе 2 слайдера -->
                 <div class="range-slider">
-                <input type="number" value="0" name="min">
-                <input type="number" value="0" name="max">
-
-                <div class="range-slider-track">
-                  <div class="range-slider-pin range-slider-pin-min"></div>
-                  <div class="range-slider-pin range-slider-pin-max"></div>
+                  <div class="range-slider-track">
+                    <button class="range-slider-pin range-slider-pin-min"></button>
+                    <button class="range-slider-pin range-slider-pin-max"></button>
+                  </div>
                 </div>
-              </div>
               </section>
               <section>
                 <h3>Цвет</h3>
                 <ul>
-                  <li><label><input type="checkbox" name="filter-color-black" checked>Чёрный</label></li>
-                  <li><label><input type="checkbox" name="filter-color-white">Белый</label></li>
-                  <li><label><input type="checkbox" name="filter-color-blue" checked>Синий</label></li>
-                  <li><label><input type="checkbox" name="filter-color-red" checked>Красный</label></li>
-                  <li><label><input type="checkbox" name="filter-color-pink" >Розовый</label></li>
+                  <li>
+                    <input type="checkbox" id="filter-color-black" name="filter-color-black" checked>
+                    <label for="filter-color-black">Чёрный</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="filter-color-white" name="filter-color-white">
+                    <label for="filter-color-white">Белый</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="filter-color-blue" name="filter-color-blue" checked>
+                    <label for="filter-color-blue">Синий</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="filter-color-red" name="filter-color-red" checked>
+                    <label for="filter-color-red">Красный</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="filter-color-pink" name="filter-color-pink" >
+                    <label for="filter-color-pink">Розовый</label>
+                  </li>
                 </ul>
               </section>
               <section>
                 <h3>Bluetooth</h3>
                 <ul>
-                  <li><label><input type="radio" name="bluetooth" value="with-bluetooth" checked>Есть</label></li>
-                  <li><label><input type="radio" name="bluetooth" value="without-bluetooth">Нет</label></li>
+                  <li>
+                    <input type="radio" id="with-bluetooth" name="bluetooth" value="with-bluetooth" checked>
+                    <label for="with-bluetooth">Есть</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="without-bluetooth" name="bluetooth" value="without-bluetooth">
+                    <label for="without-bluetooth">Нет</label>
+                  </li>
                 </ul>
                 <button>Показать</button>
               </section>
@@ -149,7 +168,7 @@
             </div>
             <div class="pagination">
               <h2 class="visually-hidden">Список страниц</h2>
-              <span>Назад</span> <!-- Не знал в какой элемент обернуть, ибо ссылкой это может быть, когда находишься на первой странице -->
+              <a>Назад</a>
               <ul>
                 <li>1</li>
                 <li><a href="">2</a></li>
