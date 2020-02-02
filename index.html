@@ -6,8 +6,8 @@
   </head>
   <body>
     <header>
-      <a><img src="img/logo-device.svg" width="164" height="36" alt="Device"></a>
-      <input type="search" name="search">
+      <a><img src="img/logo-device.svg" width="164" height="36" alt="Логотип сайта Device"></a>
+      <input type="search" name="search" placeholder="Поиск по сайту">
       <ul>
         <li><a href="">Войти</a></li>
       </ul>
@@ -15,7 +15,18 @@
       <a href="">Корзина</a>
       <nav>
         <ul>
-          <li><span>Каталог товаров</span></li>
+          <li>
+            <a href="">Каталог товаров</a>
+            <button type="button" aria-label="Открыть каталог товаров">+</button>
+            <ul>
+              <li><a href="">Виртуальная реальность</a></li>
+              <li><a href="">Фитнес-браслеты</a></li>
+              <li><a href="">Квадрокоптеры</a></li>
+              <li><a href="">Моноподы для селфи</a></li>
+              <li><a href="">Умные часы</a></li>
+              <li><a href="">Экшн-камеры</a></li>
+            </ul>
+          </li>
           <li><a href="">Доставка</a></li>
           <li><a href="">Гарантия</a></li>
           <li><a href="">Контакты</a></li>
@@ -23,9 +34,9 @@
       </nav>
     </header>
     <main>
-      <h1>Device</h1>
+      <h1 class="visually-hidden">Device</h1>
       <section class="slider">
-        <h2>Популярные товары</h2>
+        <h2 class="visually-hidden">Популярные товары</h2>
         <section>
           <img src="img/slider-1.png" width="384" height="486" alt="Делай селфи, как Бен Стиллер!">
           <span>01</span>
@@ -42,7 +53,7 @@
             </ul>
           </div>
           <section>
-            <h3>Характеристики</h3>
+            <h3 class="visually-hidden">Характеристики</h3>
             <div>
               <p>8,5 м</p>
               <h4>Длина палки</h4>
@@ -76,7 +87,7 @@
             </ul>
           </div>
           <section>
-            <h3>Характеристики</h3>
+            <h3 class="visually-hidden">Характеристики</h3>
             <div>
               <p>48 часов</p>
               <h4>Без подзарядки</h4>
@@ -99,7 +110,7 @@
             </ul>
           </div>
           <section>
-            <h3>Характеристики</h3>
+            <h3 class="visually-hidden">Характеристики</h3>
             <div>
               <p>800 м</p>
               <h4>Дальность полета</h4>
@@ -112,7 +123,7 @@
         </section>
       </section>
       <section class="popular-categories">
-        <h2>Популярные категории</h2>
+        <h2 class="visually-hidden">Популярные категории</h2>
         <ul>
           <li>
             <a href=""><img src="img/popular-category1.jpg" width="160" height="160" alt="Виртуальная реальность"></a>
@@ -141,7 +152,7 @@
         </ul>
       </section>
       <section class="info-slider">
-        <h2>Дополнительная информация</h2>
+        <h2 class="visually-hidden">Дополнительная информация</h2>
         <div>
           <button type="button">Доставка</button>
           <button type="button">Гарантия</button>
@@ -190,7 +201,7 @@
         </div>
       </section>
       <section class="brands">
-        <h2>Бренды</h2>
+        <h2 class="visually-hidden">Бренды</h2>
         <ul>
           <li><img src="img/brandlogo-1.png" width="260" height="100" alt="dji"></li>
           <li><img src="img/brandlogo-2.jpg" width="260" height="100" alt="spgadgets"></li>
@@ -213,17 +224,37 @@
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
         <figure>
-          <img src="#" width="620" height="222" alt="Карта">
+          <img src="img/map.jpg" width="620" height="222" alt="Карта">
         </figure>
         <button type="button">Напишите нам</button>
       </section>
+      <section>
+        <h2>Напишите нам</h2>
+        <button type="button" aria-label="Закрыть">X</button>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <div>
+            <label for="contact-name">Ваше имя:</label>
+            <input id="contact-name" type="text" name="name" placeholder="Имя Фамилия">
+            <label for="contact-email">Ваш e-mail:</label>
+            <input id="contact-email" type="email" name="email" placeholder="email@example.com">
+          </div>
+          <label for="contact-message">Текст письма:</label>
+          <input id="contact-message" type="text" name="message" placeholder="В свободной форме">
+          <button>Отправить</button>
+        </form>
+      </section>
+      <section>
+        <h2 class="visually-hidden">Как к нам доехать</h2>
+        <img src="img/map-big.jpg" alt="г. Москва, ул. Строителей, 15 " width="960" height="559">
+        <button type="button" aria-label="Закрыть">X</button>
+      </section>
     </main>
     <footer>
-      <a><img src="img/logo-device.svg" width="164" height="36" alt="Device"></a>
+      <a><img src="img/logo-device.svg" width="164" height="36" alt="Логотип сайта Device"></a>
       <ul>
         <li><a href="">Войти</a></li>
-        <li>Сравнить</li>
-        <li>Корзина</li>
+        <li><a href="">Сравнить</a></li>
+        <li><a href="">Корзина</a></li>
       </ul>
       <p>г. Москва, ул. Строителей, 15 </p>
       <ul>
@@ -240,7 +271,7 @@
           <li><a href="">Twitter</a></li>
         </ul>
       </section>
-      <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="logo-html.svg" width="27" height="35" alt="HTMLAcademy"></a>
+      <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-html.svg" width="27" height="35" alt="Создано под руководством HTMLAcademy"></a>
     </footer>
   </body>
 </html>
