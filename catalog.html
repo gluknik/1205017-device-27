@@ -47,8 +47,16 @@
               <h2>Фильтр:</h2>
               <section>
                 <h3>Стоимость</h3>
-                <label for="price" class="visually-hidden">Диапазон цены</label>
-                <input id="price" type="range" name="price" min="0" max="10000">
+                <!-- Кусок ниже я взял из гиста с вопросами. Насколько я понял, input type="range" тут не поможет, так как в этом элементе 2 слайдера -->
+                <div class="range-slider">
+                <input type="number" value="0" name="min">
+                <input type="number" value="0" name="max">
+
+                <div class="range-slider-track">
+                  <div class="range-slider-pin range-slider-pin-min"></div>
+                  <div class="range-slider-pin range-slider-pin-max"></div>
+                </div>
+              </div>
               </section>
               <section>
                 <h3>Цвет</h3>
@@ -74,13 +82,13 @@
             <div>
               <h2>Сортировка:</h2>
               <ul>
-                <li><button type="button">По цене</button></li>
-                <li><button type="button">По типу</button></li>
-                <li><button type="button">По популярности</button></li>
+                <li><a href="">По цене</a></li>
+                <li><a href="">По типу</a></li>
+                <li><a href="">По популярности</a></li>
               </ul>
               <div>
-                <button type="button" aria-label="От меньшего к большему">Arrow-up</button>
-                <button type="button" aria-label="От большего к меньшему">Arrow-down</button>
+                <a href="" aria-label="От меньшего к большему">Arrow-up</a>
+                <a href="" aria-label="От большего к меньшему">Arrow-down</a>
               </div>
             </div>
             <div>
