@@ -3,24 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <a><img src="img/logo-device.svg" width="164" height="36" alt="Логотип сайта Device"></a>
+    <header class="site-header">
+      <a class="header-logo"><img src="img/logo-device.svg" width="164" height="36" alt="Логотип сайта Device"></a>
       <form action="https://echo.htmlacademy.ru" method="get">
-        <input type="search" name="search" placeholder="Поиск по сайту">
+        <input type="search" name="search" placeholder="Поиск по сайту" class="search">
       </form>
-      <ul>
-        <li><a href="">Войти</a></li>
-      </ul>
-      <a href="">Сравнить</a>
-      <a href="">Корзина</a>
-      <nav>
+      <div class="header-user-area">
         <ul>
+          <li><a href="">Войти</a></li>
+        </ul>
+        <a href="">Сравнить</a>
+        <a href="">Корзина</a>
+      </div>
+      <nav>
+        <ul class="main-menu">
           <li>
             <a href="">Каталог товаров</a>
-            <button type="button" aria-label="Открыть каталог товаров">+</button>
-            <ul>
+            <ul class="nav-categories-list">
               <li><a href="">Виртуальная реальность</a></li>
               <li><a href="">Фитнес-браслеты</a></li>
               <li><a href="">Квадрокоптеры</a></li>
@@ -211,18 +216,18 @@
           <li><img src="img/brandlogo-4.jpg" width="260" height="100" alt="vive"></li>
         </ul>
       </section>
-      <section>
+      <section class="index-about-us">
         <h2>О нас</h2>
         <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
         <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями: </p>
-        <ul>
+        <ul class="delivery-companies">
           <li>Деловые Линии</li>
           <li>Автотрейдинг</li>
           <li>ЖелДорЭкспедиция</li>
         </ul>
         <a href="">Подробнее о нас</a>
       </section>
-      <section>
+      <section class="index-contact">
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
         <figure>
@@ -230,7 +235,32 @@
         </figure>
         <a href="">Напишите нам</a>
       </section>
+    </main>
+    <footer class="site-footer">
+      <a><img src="img/logo-device.svg" width="164" height="36" alt="Логотип сайта Device"></a>
+      <ul class="footer-user-area">
+        <li><a href="">Войти</a></li>
+        <li><a href="">Сравнить</a></li>
+        <li><a href="">Корзина</a></li>
+      </ul>
+      <p class="footer-address">г. Москва, ул. Строителей, 15 </p>
+      <ul class="footer-menu">
+        <li><a href="">Доставка</a></li>
+        <li><a href="">Гарантия</a></li>
+        <li><a href="">Контакты</a></li>
+      </ul>
+      <p class="footer-phone">Тел.: +7 (495) 495-95-95</p>
       <section>
+        <h2>Социальные сети</h2>
+        <ul>
+          <li><a href="">Facebook</a></li>
+          <li><a href="">Instagram</a></li>
+          <li><a href="">Twitter</a></li>
+        </ul>
+      </section>
+      <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-html.svg" width="27" height="35" alt="Создано под руководством HTMLAcademy"></a>
+    </footer>
+    <section class="modal modal-contact">
         <h2>Напишите нам</h2>
         <button type="button" aria-label="Закрыть">X</button>
         <form action="https://echo.htmlacademy.ru" method="post">
@@ -245,35 +275,10 @@
           <button>Отправить</button>
         </form>
       </section>
-      <section>
+      <section class="modal modal-contact">
         <h2 class="visually-hidden">Как к нам доехать</h2>
         <img src="img/map-big.jpg" alt="г. Москва, ул. Строителей, 15 " width="960" height="559">
         <button type="button" aria-label="Закрыть"><!-- Тут будет SVG с крестиком --></button>
       </section>
-    </main>
-    <footer>
-      <a><img src="img/logo-device.svg" width="164" height="36" alt="Логотип сайта Device"></a>
-      <ul>
-        <li><a href="">Войти</a></li>
-        <li><a href="">Сравнить</a></li>
-        <li><a href="">Корзина</a></li>
-      </ul>
-      <p>г. Москва, ул. Строителей, 15 </p>
-      <ul>
-        <li><a href="">Доставка</a></li>
-        <li><a href="">Гарантия</a></li>
-        <li><a href="">Контакты</a></li>
-      </ul>
-      <p>Тел.: +7 (495) 495-95-95</p>
-      <section>
-        <h2>Социальные сети</h2>
-        <ul>
-          <li><a href="">Facebook</a></li>
-          <li><a href="">Instagram</a></li>
-          <li><a href="">Twitter</a></li>
-        </ul>
-      </section>
-      <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-html.svg" width="27" height="35" alt="Создано под руководством HTMLAcademy"></a>
-    </footer>
   </body>
 </html>

@@ -1,0 +1,244 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0.15px;
+  color: #464646;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.site-header {
+  background-color: rgba(240, 197, 46, 0.5);
+}
+
+.header-user-area ul,
+.main-menu,
+.breadcrumbs {
+  list-style: none;
+}
+
+.header-user-area .logout {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.nav-categories-list {
+  display: none;
+}
+
+.main-menu > li {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+}
+
+.modal {
+  display: none;
+}
+
+.index-about-us h2,
+.index-contact h2,
+.category-name {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  letter-spacing: 0.47px;
+  color: #000000;
+  font-weight: 800;
+}
+
+.delivery-companies {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.index-about-us a,
+.index-contact a,
+.footer-menu a {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.index-about-us a:active,
+.index-contact a:active,
+.products .add-to-cart:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.site-footer {
+  background-color: #464646;
+}
+
+.footer-user-area a {
+  line-height: 36px;
+  letter-spacing: 0.15px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-user-area a:hover {
+  color: #ffffff;
+}
+
+.footer-user-area a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-user-area .logout {
+  color: rgba(255, 255, 255, 0.3);;
+}
+
+.footer-address,
+.footer-phone {
+  color: #ffffff;
+}
+
+.footer-menu a {
+  color: #ffffff;
+}
+
+.footer-menu a:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-menu a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search {
+  background-color: transparent;
+  border: none;
+}
+
+.search::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search:hover::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search:focus::placeholder {
+  color: #000000;
+}
+
+.header-user-area a:hover,
+.main-menu a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.header-user-area a:active,
+.main-menu a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.side-filter {
+  background-color: #ebebeb;
+}
+
+.breadcrumbs a,
+.breadcrumbs {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.14px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs a:active {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.side-filter-name,
+.products .product-name {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.18px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.filter-option {
+  font-size: 14px;
+  line-height: 40px;
+  letter-spacing: 0.14px;
+  color: #000000;
+}
+
+.side-filter-button {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 18px;
+  letter-spacing: 3.6px;
+  font-weight: 800;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 0;
+}
+
+.add-to-cart {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  font-weight: 800;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 0;
+}
+
+.add-to-comparsion {
+  font-size: 13px;
+  line-height: 36px;
+  letter-spacing: 0.13px;
+  color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+  border: 0;
+}
+
+.add-to-comparsion:hover {
+  color: #000000;
+}
+
+.add-to-comparsion:active {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.products .product-price {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+  font-weight: 300;
+  color: #464646;
+}
