@@ -5,7 +5,6 @@
     <title>Моноподы для селфи</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/stylesheet.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -51,7 +50,7 @@
         <section>
           <section class="side-filter">
             <form action="https://echo.htmlacademy.ru" method="post">
-              <h2>Фильтр:</h2>
+              <h2 class="side-filter-heading">Фильтр:</h2>
               <section>
                 <h3 class="side-filter-name">Стоимость</h3>
                 <!-- Кусок ниже я взял из гиста с вопросами. Насколько я понял, input type="range" тут не поможет, так как в этом элементе 2 слайдера -->
@@ -104,12 +103,12 @@
             </form>
           </section>
           <section>
-            <div>
-              <h2>Сортировка:</h2>
+            <div class="sorting-panel">
+              <h2 class="sorting-panel-heading">Сортировка:</h2>
               <ul>
-                <li><a href="">По цене</a></li>
-                <li><a href="">По типу</a></li>
-                <li><a href="">По популярности</a></li>
+                <li class="sorting-panel-item"><a href="">По цене</a></li>
+                <li class="sorting-panel-item"><a href="">По типу</a></li>
+                <li class="sorting-panel-item"><a href="">По популярности</a></li>
               </ul>
               <div>
                 <a href="" aria-label="От меньшего к большему">Arrow-up</a>
@@ -174,14 +173,14 @@
             </div>
             <div class="pagination">
               <h2 class="">Список страниц</h2>
-              <a>Назад</a>
-              <ul>
-                <li>1</li>
+              <a class="page-back">Назад</a>
+              <ul class="pages-list">
+                <li><a>1</a></li>
                 <li><a href="">2</a></li>
                 <li><a href="">3</a></li>
                 <li><a href="">4</a></li>
               </ul>
-              <a href="">Вперед</a>
+              <a href="" class="page-forward">Вперед</a>
             </div>
           </section>
         </section>
