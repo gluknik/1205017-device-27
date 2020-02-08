@@ -355,7 +355,7 @@ a {
   color: #000000;
 }
 
-.info-slider {
+.info-slider-wrapper {
   background-color: #e5e5e5;
 }
 
@@ -450,7 +450,8 @@ a {
 .sorting-panel ul,
 .pages-list,
 .products ul,
-.breadcrumbs {
+.breadcrumbs,
+.brands ul {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -503,17 +504,17 @@ a {
   margin-bottom: 36px;
 }
 
-.address-menu-phone-wrapper {
+.address-wrapper {
   display: flex;
   justify-content: space-between;
   margin-bottom: 63px;
 }
 
-.address-menu-phone-wrapper p {
+.address-wrapper p {
   margin: 0
 }
 
-.strip-socials-develeper-wrapper {
+.socials-wrapper {
   display: flex;
   justify-content: space-between;
 }
@@ -553,7 +554,8 @@ a {
 }
 
 .side-filter-heading,
-.sorting-panel-heading {
+.sorting-panel-heading,
+.info-slider-heading {
   margin: 0;
 }
 
@@ -643,4 +645,100 @@ a {
 
 .pages-list li:last-child {
   margin: 0;
+}
+
+.slider-buttons {
+  display: none;
+}
+
+.slider-item {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 82px;
+  padding-left: 90px;
+}
+
+.slide-number-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-features {
+  display: flex;
+}
+
+.slide-info {
+  width: 479px;
+}
+
+.category-img-wrapper {
+  background-color: rgba(240, 197, 46, 0.5);
+  width: 160px;
+  height: 160px;
+}
+
+.popular-category-item:nth-child(1) img {
+  padding-top: 52px;
+  padding-left: 31px;
+}
+
+.popular-category-item:nth-child(2) img {
+  padding-top: 41px;
+  padding-left: 38px;
+}
+
+.popular-category-item:nth-child(3) img {
+  padding-top: 38px;
+  padding-left: 49px;
+}
+
+.popular-category-item:nth-child(4) img {
+  padding-top: 50px;
+  padding-left: 28px;
+}
+
+.popular-category-item:nth-child(5) img {
+  padding-top: 32px;
+  padding-left: 55px;
+}
+
+.popular-category-item:nth-child(6) img {
+  padding-top: 49px;
+  padding-left: 13px;
+}
+
+.popular-categories ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popular-category-item {
+  width: 160px;
+}
+
+.info-slider {
+  display: flex;
+}
+
+.info-slider-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 278px;
+}
+
+.info-slider-content {
+  width: 436px;
+}
+
+.brands ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-features div {
+  margin-right: 81px;
+}
+
+.slider-features div:last-child {
+  margin-right: 0;
 }
