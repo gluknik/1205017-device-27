@@ -8,8 +8,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="site-header">
-      <div class="container">
+    <header class="site-header container category-page">
         <a class="header-logo" href="index.html"><img src="img/logo-device.svg" width="164" height="36" alt="Логотип сайта Device"></a>
         <div class="header-toolbar">
           <form action="https://echo.htmlacademy.ru" method="get">
@@ -17,32 +16,43 @@
           </form>
           <div class="header-user-area">
             <ul class="header-user-login">
-              <li><a href="">Валентин Петухов</a></li>
+              <li><a href="" class="header-username">Валентин Петухов</a></li>
               <li><a href="" class="logout">Выйти</a></li>
             </ul>
-            <a href="">Сравнить</a>
+            <a href="" class="header-compare">Сравнить</a>
             <a href="" class="header-cart">Корзина</a>
           </div>
         </div>
         <nav class="main-navigation">
           <ul class="main-menu">
             <li>
-              <a href="">Каталог товаров</a>
+              <a href="" class="catalog-menu">Каталог товаров</a>
               <ul class="nav-categories-list">
-                <li><a href="">Виртуальная реальность</a></li>
-                <li><a href="">Фитнес-браслеты</a></li>
-                <li><a href="">Квадрокоптеры</a></li>
-                <li><a href="">Моноподы для селфи</a></li>
-                <li><a href="">Умные часы</a></li>
-                <li><a href="">Экшн-камеры</a></li>
+                <li>
+                  <ul class="categories-column-1">
+                    <li><a href="">Виртуальная реальность</a></li>
+                    <li><a href="">Моноподы для селфи</a></li>
+                    <li><a href="">Экшн-камеры</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul class="categories-column-2">
+                    <li><a href="">Фитнес-браслеты</a></li>
+                    <li><a href="">Умные часы</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul class="categories-column-3">
+                    <li><a href="">Квадрокоптеры</a></li>
+                  </ul>
+                </li>
               </ul>
             </li>
-            <li><a href="">Доставка</a></li>
-            <li><a href="">Гарантия</a></li>
-            <li><a href="">Контакты</a></li>
+            <li class="main-menu-delivery"><a href="">Доставка</a></li>
+            <li class="main-menu-warranty"><a href="">Гарантия</a></li>
+            <li class="main-menu-contact"><a href="">Контакты</a></li>
           </ul>
         </nav>
-      </div>
     </header>
     <main>
       <div class="category-container">
@@ -60,7 +70,7 @@
                   <h2 class="side-filter-heading">Фильтр:</h2>
                 </div>
                 <div class="side-filter-options">
-                    <section>
+                    <section class="side-filter-section side-filter-price">
                       <h3 class="side-filter-name">Стоимость</h3>
                       <!-- Кусок ниже я взял из гиста с вопросами. Насколько я понял, input type="range" тут не поможет, так как в этом элементе 2 слайдера -->
                       <div class="range-slider">
@@ -70,41 +80,62 @@
                         </div>
                       </div>
                     </section>
-                    <section>
+                    <section class="side-filter-section side-filter-color">
                       <h3 class="side-filter-name">Цвет</h3>
-                      <ul>
+                      <ul class="color-filter">
                         <li class="filter-option">
-                          <input type="checkbox" id="filter-color-black" name="filter-color-black" checked>
-                          <label for="filter-color-black">Чёрный</label>
+                          <label class="check option">
+                            <input class="check-input" type="checkbox" name="filter-color-black" checked>
+                            <span class="check-box"></span>
+                            Чёрный
+                          </label>
                         </li>
                         <li class="filter-option">
-                          <input type="checkbox" id="filter-color-white" name="filter-color-white">
-                          <label for="filter-color-white">Белый</label>
+                          <label class="check option">
+                            <input class="check-input" type="checkbox" name="filter-color-white">
+                            <span class="check-box"></span>
+                            Белый
+                          </label>
                         </li>
                         <li class="filter-option">
-                          <input type="checkbox" id="filter-color-blue" name="filter-color-blue" checked>
-                          <label for="filter-color-blue">Синий</label>
+                          <label class="check option">
+                            <input class="check-input" type="checkbox" name="filter-color-blue" checked>
+                            <span class="check-box"></span>
+                            Синий
+                          </label>
                         </li>
                         <li class="filter-option">
-                          <input type="checkbox" id="filter-color-red" name="filter-color-red" checked>
-                          <label for="filter-color-red">Красный</label>
+                          <label class="check option">
+                            <input class="check-input" type="checkbox" name="filter-color-red" checked>
+                            <span class="check-box"></span>
+                            Красный
+                          </label>
                         </li>
                         <li class="filter-option">
-                          <input type="checkbox" id="filter-color-pink" name="filter-color-pink" >
-                          <label for="filter-color-pink">Розовый</label>
+                          <label class="check option">
+                            <input class="check-input" type="checkbox" name="filter-color-pink" >
+                            <span class="check-box"></span>
+                            Розовый
+                          </label>
                         </li>
                       </ul>
                     </section>
-                    <section>
+                    <section class="side-filter-section side-filter-bluetooth">
                       <h3 class="side-filter-name">Bluetooth</h3>
                       <ul>
                         <li class="filter-option">
-                          <input type="radio" id="with-bluetooth" name="bluetooth" value="with-bluetooth" checked>
-                          <label for="with-bluetooth">Есть</label>
+                          <label class="radio option">
+                            <input class="radio-input" type="radio" name="bluetooth" value="with-bluetooth" checked>
+                            <span class="radio-button"></span>
+                            Есть
+                          </label>
                         </li>
                         <li class="filter-option">
-                          <input type="radio" id="without-bluetooth" name="bluetooth" value="without-bluetooth">
-                          <label for="without-bluetooth">Нет</label>
+                          <label class="radio option">
+                            <input class="radio-input" type="radio" name="bluetooth" value="without-bluetooth">
+                            <span class="radio-button"></span>
+                            Нет
+                          </label>
                         </li>
                       </ul>
                       <button class="side-filter-button">Показать</button>
@@ -121,63 +152,71 @@
                 <li class="sorting-panel-item"><a href="">По популярности</a></li>
               </ul>
               <div class="sorting-arrows">
-                <a href="" aria-label="От меньшего к большему">Arrow-up</a>
-                <a href="" aria-label="От большего к меньшему">Arrow-down</a>
+                <a href="" aria-label="От меньшего к большему" class="arrow-up"></a>
+                <a href="" aria-label="От большего к меньшему" class="arrow-down clicked"></a>
               </div>
             </div>
             <div class="products">
               <ul>
                 <li>
-                  <div>
+                  <div class="product-image-wrapper">
                     <img src="img/item-1.jpg" width="360" height="379" alt="Любительская селфи-палка">
-                    <div>
+                    <div class="poductbox-overlay">
                       <button type="button" class="add-to-cart">В корзину</button>
                       <button type="button" class="add-to-comparsion">Добавить к сравнению</button>
                     </div>
                   </div>
-                  <h3 class="product-name">
-                    <a href="">Любительская селфи-палка</a>
-                  </h3>
-                  <p class="product-price">500 руб.</p>
+                  <div class="product-name-wrapper">
+                    <h3 class="product-name">
+                      <a href="">Любительская селфи-палка</a>
+                    </h3>
+                    <p class="product-price">500 руб.</p>
+                  </div>
                 </li>
                 <li>
-                  <div>
+                  <div class="product-image-wrapper">
                     <img src="img/item-2.jpg" width="360" height="379" alt="Профессиональная селфи-палка">
-                    <div>
+                    <div class="poductbox-overlay">
                       <button type="button" class="add-to-cart">В корзину</button>
                       <button type="button" class="add-to-comparsion">Добавить к сравнению</button>
                     </div>
                   </div>
-                  <h3 class="product-name">
-                    <a href="">Профессиональная селфи-палка</a>
-                  </h3>
-                  <p class="product-price">1500 руб.</p>
+                  <div class="product-name-wrapper">
+                    <h3 class="product-name">
+                     <a href="">Профессиональная селфи-палка</a>
+                    </h3>
+                    <p class="product-price">1500 руб.</p>
+                  </div>
                 </li>
                 <li>
-                  <div>
+                  <div class="product-image-wrapper">
                     <img src="img/item-3.jpg" width="360" height="379" alt="Непотопляемая селфи-палка">
-                    <div>
+                    <div class="poductbox-overlay">
                       <button type="button" class="add-to-cart">В корзину</button>
                       <button type="button" class="add-to-comparsion">Добавить к сравнению</button>
                     </div>
                   </div>
-                  <h3 class="product-name">
-                    <a href="">Непотопляемая селфи-палка</a>
-                  </h3>
-                  <p class="product-price">2500 руб.</p>
+                  <div class="product-name-wrapper">
+                    <h3 class="product-name">
+                      <a href="">Непотопляемая селфи-палка</a>
+                   </h3>
+                   <p class="product-price">2500 руб.</p>
+                 </div>
                 </li>
                 <li>
-                  <div>
+                  <div class="product-image-wrapper">
                     <img src="img/item-4.jpg" width="360" height="379" alt="Селфи-палка «Следуй за мной»">
-                    <div>
+                    <div class="poductbox-overlay">
                       <button type="button" class="add-to-cart">В корзину</button>
                       <button type="button" class="add-to-comparsion">Добавить к сравнению</button>
                     </div>
                   </div>
-                  <h3 class="product-name">
-                    <a href="">Селфи-палка «Следуй за мной»</a>
-                  </h3>
-                  <p class="product-price">4500 руб.</p>
+                  <div class="product-name-wrapper">
+                   <h3 class="product-name">
+                     <a href="">Селфи-палка «Следуй за мной»</a>
+                   </h3>
+                    <p class="product-price">4500 руб.</p>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -185,7 +224,7 @@
               <h2 class="visually-hidden">Список страниц</h2>
               <a class="page-back">Назад</a>
               <ul class="pages-list">
-                <li><a>1</a></li>
+                <li><a class="current">1</a></li>
                 <li><a href="">2</a></li>
                 <li><a href="">3</a></li>
               </ul>
@@ -197,12 +236,12 @@
     <footer class="site-footer">
       <div class="container">
         <div class="footer-toolbar">
-          <a><img src="img/logo-device.svg" width="164" height="36" alt="Логотип сайта Device"></a>
+          <a class="footer-logo" href="index.html"><img src="img/logo-footer.svg" width="164" height="36" alt="Логотип сайта Device"></a>
           <ul class="footer-user-area">
-            <li><a href="">Валентин Петухов</a></li>
+            <li><a href="" class="footer-username">Валентин Петухов</a></li>
             <li><a href="" class="logout">Выйти</a></li>
-            <li><a href="">Сравнить</a></li>
-            <li><a href="">Корзина</a></li>
+            <li><a href="" class="footer-compare">Сравнить</a></li>
+            <li><a href="" class="footer-cart">Корзина</a></li>
           </ul>
         </div>
         <div class="address-wrapper">
@@ -215,16 +254,16 @@
           <p class="footer-phone">Тел.: +7 (495) 495-95-95</p>
         </div>
         <div class="socials-wrapper">
-          <div class="yellow-strip">Желтая полоска</div> <!-- Без понятия как ее нужно будет сделать. Пока что добавил как див для равного распределения флекс-элементов -->
+          <div class="yellow-strip"></div> <!-- Без понятия как ее нужно будет сделать. Пока что добавил как див для равного распределения флекс-элементов  -->
           <section class="socials">
             <h2 class="visually-hidden">Социальные сети</h2>
-            <ul>
-              <li><a href="">Facebook</a></li>
-              <li><a href="">Instagram</a></li>
-              <li><a href="">Twitter</a></li>
+            <ul class="socials-list">
+              <li><a href="" сlass="facebook"><img src="img/fb.svg" width="32" height="32" alt="Facebook"></a></li>
+              <li><a href="" сlass="instagram"><img src="img/instagram.svg" width="32" height="32" alt="Instagram"></a></li>
+              <li><a href="" сlass="twitter"><img src="img/twitter.svg" width="32" height="32" alt="Twitter"></a></li>
             </ul>
           </section>
-          <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-html.svg" width="27" height="35" alt="Создано под руководством HTMLAcademy"></a>
+          <a href="https://htmlacademy.ru/intensive/htmlcss" class="htmlacademy"><img src="img/logo-html.svg" width="27" height="35" alt="Создано под руководством HTMLAcademy"></a>
         </div>
       </div>
     </footer>
