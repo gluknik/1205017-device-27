@@ -13,6 +13,7 @@
         <div class="header-toolbar">
           <form action="https://echo.htmlacademy.ru" method="get">
             <input type="search" name="search" placeholder="Поиск по сайту" class="search">
+            <button class="search-btn" type="submit">Найти</button>
           </form>
           <div class="header-user-area">
             <ul class="header-user-login">
@@ -72,11 +73,14 @@
                 <div class="side-filter-options">
                     <section class="side-filter-section side-filter-price">
                       <h3 class="side-filter-name">Стоимость</h3>
-                      <!-- Кусок ниже я взял из гиста с вопросами. Насколько я понял, input type="range" тут не поможет, так как в этом элементе 2 слайдера -->
                       <div class="range-slider">
-                        <div class="range-slider-track">
-                          <button class="range-slider-pin range-slider-pin-min"></button>
-                          <button class="range-slider-pin range-slider-pin-max"></button>
+                        <div class="filter-grey-strip"></div>
+                        <div class="filter-green-strip"></div>
+                        <button class="range-slider-pin range-slider-pin-min" type="button"></button>
+                        <button class="range-slider-pin range-slider-pin-max" type="button"></button>
+                        <div class="price-filter-text">
+                          <span class="price-from">от 0</span>
+                          <span class="price-to">до 5000</span>
                         </div>
                       </div>
                     </section>
@@ -84,39 +88,24 @@
                       <h3 class="side-filter-name">Цвет</h3>
                       <ul class="color-filter">
                         <li class="filter-option">
-                          <label class="check option">
-                            <input class="check-input" type="checkbox" name="filter-color-black" checked>
-                            <span class="check-box"></span>
-                            Чёрный
-                          </label>
+                          <input class="check-input" type="checkbox" id="filter-color-black" name="filter-color-black" checked>
+                          <label class="check-1" for="filter-color-black">Чёрный</label>
                         </li>
                         <li class="filter-option">
-                          <label class="check option">
-                            <input class="check-input" type="checkbox" name="filter-color-white">
-                            <span class="check-box"></span>
-                            Белый
-                          </label>
+                          <input class="check-input" type="checkbox" id="filter-color-white" name="filter-color-white">
+                          <label class="check-2" for="filter-color-white">Белый</label>
                         </li>
                         <li class="filter-option">
-                          <label class="check option">
-                            <input class="check-input" type="checkbox" name="filter-color-blue" checked>
-                            <span class="check-box"></span>
-                            Синий
-                          </label>
+                          <input class="check-input" type="checkbox" id="filter-color-blue" name="filter-color-blue" checked>
+                          <label class="check-3" for="filter-color-blue">Синий</label>
                         </li>
                         <li class="filter-option">
-                          <label class="check option">
-                            <input class="check-input" type="checkbox" name="filter-color-red" checked>
-                            <span class="check-box"></span>
-                            Красный
-                          </label>
+                          <input class="check-input" type="checkbox" id="filter-color-red" name="filter-color-red" checked>
+                          <label class="check-4" for="filter-color-red">Красный</label>
                         </li>
                         <li class="filter-option">
-                          <label class="check option">
-                            <input class="check-input" type="checkbox" name="filter-color-pink" >
-                            <span class="check-box"></span>
-                            Розовый
-                          </label>
+                          <input class="check-input" type="checkbox" id="filter-color-pink" name="filter-color-pink" >
+                          <label class="check-5" for="filter-color-pink">Розовый</label>
                         </li>
                       </ul>
                     </section>
@@ -124,18 +113,12 @@
                       <h3 class="side-filter-name">Bluetooth</h3>
                       <ul>
                         <li class="filter-option">
-                          <label class="radio option">
-                            <input class="radio-input" type="radio" name="bluetooth" value="with-bluetooth" checked>
-                            <span class="radio-button"></span>
-                            Есть
-                          </label>
+                          <input class="radio-input" type="radio" id="with-bluetooth" name="bluetooth" value="with-bluetooth" checked>
+                          <label class="radio" for="with-bluetooth">Есть</label>
                         </li>
                         <li class="filter-option">
-                          <label class="radio option">
-                            <input class="radio-input" type="radio" name="bluetooth" value="without-bluetooth">
-                            <span class="radio-button"></span>
-                            Нет
-                          </label>
+                          <input class="radio-input" type="radio" id="without-bluetooth" name="bluetooth" value="without-bluetooth">
+                          <label class="radio" for="without-bluetooth">Нет</label>
                         </li>
                       </ul>
                       <button class="side-filter-button">Показать</button>

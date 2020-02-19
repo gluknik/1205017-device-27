@@ -477,8 +477,21 @@ a {
 }
 
 .header-toolbar .search {
-  margin-right: 351px;
+  margin-right: 99px;
   position: relative;
+  width: 441px;
+  padding-left: 39px;
+  background-image: url(../img/search.svg);
+  background-repeat: no-repeat;
+  background-position: 3px 18px;
+  padding-top: 1px;
+  height: 49px;
+  margin-top: -10px;
+}
+
+.header-toolbar .search:hover {
+  border-bottom: 2px solid #000000;
+  padding-top: 3px;
 }
 
 .header-user-login,
@@ -528,14 +541,14 @@ a {
 .main-menu {
   padding-left: 0;
   display: flex;
-  margin-top: 39px;
+  margin-top: 30px;
 }
 
 .about-contact-wrapper {
   display: flex;
   justify-content: space-between;
   margin-bottom: 160px;
-  margin-top: 97px;
+  margin-top: 106px;
 }
 
 .index-about-us {
@@ -835,8 +848,10 @@ a {
 
 .header-toolbar form {
   display: inherit;
+  margin-left: -22px;
+  position: relative;
 }
-
+/*
 .site-header form::before {
   content: "";
   background-image: url(../img/search.svg);
@@ -847,6 +862,7 @@ a {
   top: 8px;
   right: 19px;
 }
+*/
 
 .header-user-login .header-username::before,
 .header-login::before {
@@ -962,13 +978,27 @@ a {
   z-index: -1;
 }
 
+.info-slider-buttons button:hover::before {
+  height: 40px;
+  top: 0px;
+}
+
+.info-slider-buttons button:active {
+  color: #f7e184;
+}
+
+.info-slider-buttons button:active::before {
+  background-color: #000000;
+}
+
 .info-slider-buttons .active {
   background-color: black;
   color: #f7e184;
   position: relative;
 }
 
-.info-slider-buttons .active::after {
+.info-slider-buttons .active::after,
+.info-slider-buttons button:active::after {
   content: "";
   width: 118px;
   height: 40px;
@@ -1036,9 +1066,10 @@ a {
 .contact-btn {
   width: 260px;
   position: absolute;
-  bottom: -70px;
+  bottom: -87px;
   text-align: center;
   padding-left: 2px;
+  height: 40px;
 }
 
 .about-us-btn::before,
@@ -1052,6 +1083,13 @@ a {
   left: 0;
   top: 7px;
   z-index: -1;
+}
+
+.about-us-btn:hover::before,
+.contact-btn:hover::before {
+  height: 40px;
+  top: -8px;
+  left: 0;
 }
 
 .delivery-companies {
@@ -1155,8 +1193,8 @@ a {
   line-height: 36px;
   letter-spacing: 0.15px;
   text-transform: none;
-  /* display: flex; */
-  margin-top: 20px;
+  display: none;
+  padding-top: 20px;
 }
 
 .socials {
@@ -1170,7 +1208,7 @@ a {
 .modal-contact {
   width: 960px;
   height: 553px;
-  position: absolute;
+  position: fixed;
   top: 1057px;
   left: 50%;
   transform: translate(-50%);
@@ -1203,6 +1241,14 @@ a {
   margin-top: 22px;
   margin-right: 22px;
   border-radius: 50%;
+}
+
+.modal-close:hover {
+  opacity: 1;
+}
+
+.modal-close:active {
+  opacity: 0.3;
 }
 
 .contact-name-email-wrapper {
@@ -1285,7 +1331,7 @@ a {
 .modal-map {
   width: 960px;
   height: 559px;
-  position: absolute;
+  position: fixed;
   top: 1852px;
   left: 50%;
   transform: translate(-50%);
@@ -1331,10 +1377,11 @@ a {
 
 .side-filter-name {
   margin-top: 10px;
+  margin-bottom: 35px;
 }
 
 .side-filter-price {
-  margin-bottom: 56px;
+  margin-bottom: 34px;
 }
 
 .side-filter-color {
@@ -1382,6 +1429,8 @@ a {
   margin-top: 6px;
 }
 
+/* old checkbox and radio styles
+
 .check-input,
 .radio-input {
   position: absolute;
@@ -1389,6 +1438,8 @@ a {
   -moz-appearance: none;
   appearance: none;
 }
+
+
 
 .check {
   padding-left: 38px;
@@ -1438,6 +1489,60 @@ a {
 .radio-input:checked + .radio-button {
   background-image: url(../img/radio-on.svg);
 }
+
+*/
+
+/* NEW CHECKBOX AND RADIO STYLES */
+
+.filter-option input[type="checkbox"],
+.filter-option input[type="radio"] {
+  opacity: 0;
+}
+
+.filter-option label {
+  position: relative;
+  padding-left: 22px;
+}
+
+.check-input + label::before {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 23px;
+  background-image: url(../img/checkbox-off.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -2px;
+  left: -18px;
+}
+
+.radio-input + label::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/radio-off.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -4px;
+  left: -18px;
+}
+
+.filter-option input[type="checkbox"]:checked + label::before {
+  background-image: url(../img/checkbox-on.svg);
+}
+
+.filter-option input[type="radio"]:checked + label::before {
+  background-image: url(../img/radio-on.svg);
+}
+
+.filter-option input[type="checkbox"]:focus + label::before,
+.filter-option input[type="radio"]:focus + label::before {
+  outline: rgb(59, 153, 252) auto 5px;
+}
+
+
+
 
 .products .product-name {
   max-width: 252px;
@@ -1549,6 +1654,7 @@ a {
   opacity: 1;
 }
 
+/*
 .search::after {
   content: "";
   width: 441px;
@@ -1557,8 +1663,149 @@ a {
   position: absolute;
   display: block;
 }
+*/
 
 .slide-details-btn:hover.slide-details-btn::before {
   height: 40px;
   top: 0;
+}
+
+.category-img-wrapper:hover {
+  background-color: #f0c52e;
+}
+
+.category-img-wrapper:active img {
+  opacity: 0.3;
+}
+
+.catalog-menu:hover + .nav-categories-list,
+.nav-categories-list:hover + .nav-categories-list {
+  display: flex;
+}
+
+.search-btn {
+  width: 85px;
+  height: 49px;
+  background-color: transparent;
+  border: 2px solid #000000;
+  position: absolute;
+  right: 99px;
+  bottom: 0;
+  display: none;
+}
+
+.search-btn:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.search-btn:active {
+  background-color: #000000;
+  color: rgba(255,255,255,0.3);
+}
+
+.search:focus + .search-btn {
+  display: block;
+}
+
+.filter-grey-strip {
+  width: 196px;
+  height: 2px;
+  background-color: #dbdbdb;
+  margin-left: 4px;
+}
+
+.filter-green-strip {
+  width: 110px;
+  height: 2px;
+  background-color: #91c92f;
+  margin-left: 4px;
+  position: absolute;
+  top: 0;
+}
+
+.range-slider-pin {
+  position: absolute;
+  width: 20px;
+  height: 22px;
+  background-image: url(../img/filter-button.svg);
+  background-size: cover;
+  border-radius: 50%;
+  border: 0;
+}
+
+.range-slider-pin:active {
+  width: 22px;
+  height: 24px;
+}
+
+.range-slider-pin-min {
+  top: -10px;
+  left: -6px;
+}
+
+.range-slider-pin-max {
+  top: -10px;
+  left: 107px;
+}
+
+.range-slider {
+  position: relative;
+}
+
+.price-filter-text {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.2);
+  margin-top: 9px;
+}
+
+.price-to {
+  margin-left: 58px;
+}
+
+.side-filter-color h3,
+.side-filter-bluetooth h3 {
+  margin-bottom: 18px;
+}
+
+.brands a {
+  width: 260px;
+  height: 100px;
+  display: block;
+  background-repeat: no-repeat;
+}
+
+.brands .dji {
+  background-image: url(../img/brandlogo-1-grey.jpg);
+}
+
+.brands .dji:hover {
+  background-image: url(../img/brandlogo-1.png);
+}
+
+.brands .spgadgets {
+  background-image: url(../img/brandlogo-2-grey.jpg);
+}
+
+.brands .spgadgets:hover {
+  background-image: url(../img/brandlogo-2.jpg);
+}
+
+.brands .gopro {
+  background-image: url(../img/brandlogo-3-grey.jpg);
+}
+
+.brands .gopro:hover {
+  background-image: url(../img/brandlogo-3.jpg);
+}
+
+.brands .vive {
+  background-image: url(../img/brandlogo-4-grey.jpg);
+}
+
+.brands .vive:hover {
+  background-image: url(../img/brandlogo-4.jpg);
 }
