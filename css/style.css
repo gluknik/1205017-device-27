@@ -494,6 +494,20 @@ a {
   padding-top: 3px;
 }
 
+/*
+
+.header-toolbar .search:focus {
+  border-bottom: 2px solid #000000;
+  padding-top: 3px;
+}
+
+*/
+
+.search-form:hover .search {
+  border-bottom: 2px solid #000000;
+  padding-top: 3px;
+}
+
 .header-user-login,
 .footer-user-area,
 .footer-menu,
@@ -1195,6 +1209,7 @@ a {
   text-transform: none;
   display: none;
   padding-top: 20px;
+  position: absolute;
 }
 
 .socials {
@@ -1209,9 +1224,9 @@ a {
   width: 960px;
   height: 553px;
   position: fixed;
-  top: 1057px;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%, -50%);
   background-color: #ffffff;
   z-index: 1;
 }
@@ -1303,6 +1318,7 @@ a {
   background-color: transparent;
   position: relative;
   margin-top: 50px;
+  height: 40px;
 }
 
 .contact-send-btn::before {
@@ -1312,9 +1328,14 @@ a {
   background-color: #f0c52e;
   display: block;
   position: absolute;
-  top: 9px;
+  top: 16px;
   left: 0;
   z-index: -1;
+}
+
+.contact-send-btn:hover::before{
+  height: 40px;
+  top: 0;
 }
 
 .modal-contact-form input {
@@ -1332,9 +1353,9 @@ a {
   width: 960px;
   height: 559px;
   position: fixed;
-  top: 1852px;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%, -50%);
 }
 
 .modal-map .modal-close {
@@ -1679,8 +1700,34 @@ a {
 }
 
 .catalog-menu:hover + .nav-categories-list,
-.nav-categories-list:hover + .nav-categories-list {
+.nav-categories-list:hover {
   display: flex;
+}
+
+.nav-categories-list::before {
+  content: "";
+  width: 554px;
+  height: 1px;
+  position: absolute;
+  display: block;
+  background-color: transparent;
+  top: 0;
+}
+
+.nav-categories-list::after {
+  content: "";
+  width: 1160px;
+  height: 163px;
+  position: absolute;
+  display: block;
+  background-color: #f7e296;
+  top: 0;
+  left: -59px;
+  z-index: 1;
+}
+
+.nav-categories-list li {
+  z-index: 2;
 }
 
 .search-btn {
@@ -1699,13 +1746,27 @@ a {
   color: #ffffff;
 }
 
+.search-btn:focus {
+  background-color: #000000;
+  color: rgba(255,255,255,0.3);
+  display: block;
+}
+
 .search-btn:active {
   background-color: #000000;
   color: rgba(255,255,255,0.3);
+  display: block;
 }
 
 .search:focus + .search-btn {
   display: block;
+}
+
+.search-form:focus-within button {
+  display: block;
+}
+.search-form:focus-within input {
+  border-bottom: 2px solid #000000;
 }
 
 .filter-grey-strip {
