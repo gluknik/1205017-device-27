@@ -537,6 +537,11 @@ img {
   padding-top: 3px;
 }
 
+.header-toolbar .search:focus {
+  border-bottom: 2px solid #000000;
+  padding-top: 3px;
+}
+
 .header-user-login,
 .footer-user-area,
 .footer-menu,
@@ -1860,6 +1865,7 @@ img {
 }
 .search-form:focus-within input {
   border-bottom: 2px solid #000000;
+  padding-top: 3px;
 }
 
 .filter-grey-strip {
