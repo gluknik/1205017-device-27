@@ -1509,14 +1509,10 @@ img {
   margin-top: 6px;
 }
 
-.filter-option input[type="checkbox"],
-.filter-option input[type="radio"] {
-  opacity: 0;
-}
-
 .filter-option label {
   position: relative;
   padding-left: 22px;
+  margin-left: 16px;
 }
 
 .check-input + label::before {
