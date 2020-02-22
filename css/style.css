@@ -17,6 +17,7 @@
 body {
   margin: 0;
   padding: 0;
+  min-width: 1200px;
 
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 15px;
@@ -560,7 +561,6 @@ img {
   padding-left: 0;
 }
 
-/* Тут временные значения, ибо еще нету иконок возле ссылок чтобы рассчитать все точно */
 .header-user-area {
   display: flex;
   width: 100%;
@@ -907,18 +907,6 @@ img {
   margin-left: -22px;
   position: relative;
 }
-/*
-.site-header form::before {
-  content: "";
-  background-image: url(../img/search.svg);
-  height: 16px;
-  width: 16px;
-  background-repeat: no-repeat;
-  position: relative;
-  top: 8px;
-  right: 19px;
-}
-*/
 
 .header-user-login .header-username::before,
 .header-login::before {
@@ -983,21 +971,6 @@ img {
 .slide-buttons {
   position: relative;
 }
-/* OLD
-
-.slide-details-btn::before {
-  content: "";
-  width: 220px;
-  height: 8px;
-  background-color: #f0c52e;
-  display: block;
-  position: absolute;
-  top: 16px;
-  left: 0;
-  z-index: -1;
-}
-
-*/
 
 .slide-details-btn::before {
   content: "";
@@ -1089,10 +1062,6 @@ img {
 
 .info-slider-content .row {
   display: flex;
-}
-
-.info-slider-pic {
-
 }
 
 .info-slider-pic.delivery {
@@ -1192,7 +1161,7 @@ img {
   padding-top: 36px;
 }
 
-..delivery-companies li {
+.delivery-companies li {
   position: relative;
 }
 
@@ -1458,7 +1427,6 @@ img {
   height: 186px;
 }
 
-
 .breadcrumbs li::after {
   content: "";
   background-image: url("../img/nav-arrow.svg");
@@ -1541,71 +1509,6 @@ img {
   margin-top: 6px;
 }
 
-/* old checkbox and radio styles
-
-.check-input,
-.radio-input {
-  position: absolute;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-
-
-.check {
-  padding-left: 38px;
-}
-
-.check-box {
-  position: absolute;
-  width: 26px;
-  height: 23px;
-  background-image: url(../img/checkbox-off.svg);
-  background-repeat: no-repeat;
-  margin-left: -40px;
-  margin-top: 8px;
-}
-
-.check-input:checked + .check-box {
-  background-image: url(../img/checkbox-on.svg);
-}
-
-.check-input:checked:hover + .check-box,
-.check-input:hover + .check-box,
-.radio-input:checked:hover + .radio-button,
-.radio-input:hover + .radio-button {
-  opacity: 0.6;
-}
-
-.check-input:checked:disabled + .check-box,
-.check-input:disabled + .check-box,
-.radio-input:checked:disabled + .radio-button,
-.radio-input:disabled + .radio-button {
-  opacity: 0.25;
-}
-
-.radio {
-  padding-left: 38px;
-}
-
-.radio-button {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  background-image: url(../img/radio-off.svg);
-  margin-left: -40px;
-  margin-top: 6px;
-}
-
-.radio-input:checked + .radio-button {
-  background-image: url(../img/radio-on.svg);
-}
-
-*/
-
-/* NEW CHECKBOX AND RADIO STYLES */
-
 .filter-option input[type="checkbox"],
 .filter-option input[type="radio"] {
   opacity: 0;
@@ -1652,9 +1555,6 @@ img {
 .filter-option input[type="radio"]:focus + label::before {
   outline: rgb(59, 153, 252) auto 5px;
 }
-
-
-
 
 .products .product-name {
   max-width: 256px;
@@ -1769,17 +1669,6 @@ img {
 .sorting-arrows .clicked  {
   opacity: 1;
 }
-
-/*
-.search::after {
-  content: "";
-  width: 441px;
-  height: 2px;
-  background-color: #000000;
-  position: absolute;
-  display: block;
-}
-*/
 
 .slide-details-btn:hover::before {
   height: 100%;
@@ -2111,3 +2000,59 @@ img {
   outline: none;
 }
 
+.modal-show {
+  display: block;
+  animation: bounce 1.6s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+.slider-item {
+  display: none;
+}
+
+.slider-item.monopod {
+  display: flex;
+}
