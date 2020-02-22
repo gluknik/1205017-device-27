@@ -1551,8 +1551,8 @@ img {
   background-image: url(../img/radio-on.svg);
 }
 
-.filter-option input[type="checkbox"]:focus + label::before,
-.filter-option input[type="radio"]:focus + label::before {
+.filter-option input[type="checkbox"]:focus + label,
+.filter-option input[type="radio"]:focus + label {
   outline: rgb(59, 153, 252) auto 5px;
 }
 
