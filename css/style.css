@@ -1998,31 +1998,27 @@ img {
 
 .modal-show {
   display: block;
-  animation: bounce 1.6s;
+  animation: bounce 0.6s;
 }
 
 @keyframes bounce {
   0% {
-    transform: translateY(-2000px);
+    transform: translate(-480px, -2000px);
   }
 
   70% {
-    transform: translateY(30px);
-  }
-
-  90% {
-    transform: translateY(-10px);
+    transform: translate(-480px, 30px);
   }
 
   100% {
-    transform: translateY(0);
+    transform: translate(-480px, -276px);
   }
 }
 
 @keyframes shake {
   0%,
   100% {
-    transform: translateX(0);
+    transform: translate(-480px, -276px);
   }
 
   10%,
@@ -2030,14 +2026,14 @@ img {
   50%,
   70%,
   90% {
-    transform: translateX(-10px);
+    transform: translate(-490px, -276px);
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(10px);
+    transform: translate(-470px, -276px);
   }
 }
 
