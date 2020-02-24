@@ -2051,4 +2051,5 @@ img {
 
 .modal-map iframe {
   position: absolute;
+  border: 0;
 }
