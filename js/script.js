@@ -3,16 +3,17 @@ var contactLink = document.querySelector(".contact-btn");
 var contactPopup = document.querySelector(".modal-contact");
 var popupClose = document.querySelector(".modal-close");
 
-var name = contactPopup.querySelector("[name=contact-name]");
+var popupName = contactPopup.querySelector("[name=contact-name]");
 var email = contactPopup.querySelector("[name=contact-email]");
 var message = contactPopup.querySelector("[name=contact-message]");
 var form = contactPopup.querySelector("form");
 
 var isStorageSupport = true;
-var storage = "";
+var nameStorage = "";
+var emailStorage = "";
 
 try {
-    storage = localStorage.getItem("name");
+    nameStorage = localStorage.getItem("popupName");
 } catch (err) {
     isStorageSupport = false;
 }
@@ -21,12 +22,16 @@ contactLink.addEventListener("click", function(evt) {
     evt.preventDefault();
     contactPopup.classList.add("modal-show");
 
-    if (storage) {
-      name.value = storage;
+    if (nameStorage && emailStorage) {
+      popupName.value = nameStorage;
+      email.value = emailStorage;
+      contactPopup.querySelector("[name=contact-message]").focus();
+    } else if (nameStorage && !emailStorage) {
+      popupName.value = nameStorage;
       contactPopup.querySelector("[name=contact-email]").focus();
+      // не понимаю почему popupName.focus() не сработал
     } else {
       contactPopup.querySelector("[name=contact-name]").focus();
-      // не понимаю почему name.focus() не сработал
     }
 });
 
@@ -41,8 +46,8 @@ form.addEventListener("submit", function (evt) {
 });
 
 form.addEventListener("submit", function (evt) {
-    if (!name.value || !email.value || !message.value) {
-      console.log("name = " + name.value);
+    if (!popupName.value || !email.value || !message.value) {
+      console.log("name = " + popupName.value);
       console.log("email = " + email.value);
       console.log("message = " + message.value);
       evt.preventDefault();
@@ -52,7 +57,8 @@ form.addEventListener("submit", function (evt) {
       console.log("Необходимо заполнить все поля формы");
     } else {
       if (isStorageSupport) {
-        localStorage.setItem("name", name.value);
+        localStorage.setItem("popupName", popupName.value);
+        localStorage.setItem("email", email.value);
       }
     }
 });
