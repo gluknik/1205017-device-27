@@ -2048,3 +2048,7 @@ img {
 .slider-item.monopod {
   display: flex;
 }
+
+.modal-map iframe {
+  position: absolute;
+}

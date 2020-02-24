@@ -1,7 +1,9 @@
-var contactLink = document.querySelector(".contact-btn");
+// CONTACT POPUP START
+
+var contactBtn = document.querySelector(".contact-btn");
 
 var contactPopup = document.querySelector(".modal-contact");
-var popupClose = document.querySelector(".modal-close");
+var popupClose = contactPopup.querySelector(".modal-close");
 
 var popupName = contactPopup.querySelector("[name=contact-name]");
 var email = contactPopup.querySelector("[name=contact-email]");
@@ -18,7 +20,7 @@ try {
     isStorageSupport = false;
 }
 
-contactLink.addEventListener("click", function(evt) {
+contactBtn.addEventListener("click", function(evt) {
     evt.preventDefault();
     contactPopup.classList.add("modal-show");
 
@@ -29,7 +31,6 @@ contactLink.addEventListener("click", function(evt) {
     } else if (nameStorage && !emailStorage) {
       popupName.value = nameStorage;
       contactPopup.querySelector("[name=contact-email]").focus();
-      // не понимаю почему popupName.focus() не сработал
     } else {
       contactPopup.querySelector("[name=contact-name]").focus();
     }
@@ -42,14 +43,7 @@ popupClose.addEventListener("click", function (evt) {
 });
 
 form.addEventListener("submit", function (evt) {
-    evt.preventDefault();
-});
-
-form.addEventListener("submit", function (evt) {
     if (!popupName.value || !email.value || !message.value) {
-      console.log("name = " + popupName.value);
-      console.log("email = " + email.value);
-      console.log("message = " + message.value);
       evt.preventDefault();
       contactPopup.classList.remove("modal-error");
       contactPopup.offsetWidth = contactPopup.offsetWidth;
@@ -72,3 +66,33 @@ window.addEventListener("keydown", function (evt) {
       }
     }
 });
+
+// CONTACT POPUP END
+
+// MAP POPUP START
+
+var mapBtn = document.querySelector(".modal-map-btn");
+
+var mapPopup = document.querySelector(".modal-map");
+var mapClose = mapPopup.querySelector(".modal-close");
+
+mapBtn.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  mapPopup.classList.add("modal-show");
+});
+
+mapClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  mapPopup.classList.remove("modal-show");
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (mapPopup.classList.contains("modal-show")) {
+      evt.preventDefault();
+      mapPopup.classList.remove("modal-show");
+    }
+  }
+});
+
+// MAP POPUP END
