@@ -66,8 +66,7 @@ form.addEventListener("submit", function (evt) {
 window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
       evt.preventDefault();
-      if(document.querySelector(".modal-contact").classList.contains("modal-show")) {
-        // тут в условии я пытался обратиться к contactPopup вместо document.querySelector(".modal-contact"), но получил ошибку в консоли.
+      if(contactPopup.classList.contains("modal-show")) {
         contactPopup.classList.remove("modal-show");
         contactPopup.classList.remove("modal-error");
       }
