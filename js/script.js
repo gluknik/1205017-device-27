@@ -10,29 +10,27 @@ var email = contactPopup.querySelector("[name=contact-email]");
 var message = contactPopup.querySelector("[name=contact-message]");
 var form = contactPopup.querySelector("form");
 
-var isStorageSupport = true;
 var nameStorage = "";
 var emailStorage = "";
 
-try {
-    nameStorage = localStorage.getItem("popupName");
-} catch (err) {
-    isStorageSupport = false;
+if (window.localStorage) {
+  var isStorageSupport = true;
+  popupName.value = localStorage.getItem("popupName");
+  email.value = localStorage.getItem("email");
+} else {
+  var isStorageSupport = false;
 }
 
 contactBtn.addEventListener("click", function(evt) {
     evt.preventDefault();
     contactPopup.classList.add("modal-show");
 
-    if (nameStorage && emailStorage) {
-      popupName.value = nameStorage;
-      email.value = emailStorage;
-      contactPopup.querySelector("[name=contact-message]").focus();
-    } else if (nameStorage && !emailStorage) {
-      popupName.value = nameStorage;
+    if (!popupName.value) {
+      contactPopup.querySelector("[name=contact-name]").focus();
+    } else if (popupName.value && !email.value) {
       contactPopup.querySelector("[name=contact-email]").focus();
     } else {
-      contactPopup.querySelector("[name=contact-name]").focus();
+      contactPopup.querySelector("[name=contact-message]").focus();
     }
 });
 
@@ -49,7 +47,6 @@ form.addEventListener("submit", function (evt) {
       contactPopup.offsetWidth = contactPopup.offsetWidth;
       contactPopup.classList.add("modal-error");
       console.log("Необходимо заполнить все поля формы");
-    } else {
       if (isStorageSupport) {
         localStorage.setItem("popupName", popupName.value);
         localStorage.setItem("email", email.value);
