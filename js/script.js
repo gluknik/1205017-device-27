@@ -96,3 +96,88 @@ window.addEventListener("keydown", function (evt) {
 });
 
 // MAP POPUP END
+
+// PRODUCT SLIDER START
+
+
+var productSliderBtn1 = document.querySelector(".slider-bullets-item.slide-1");
+var productSliderBtn2 = document.querySelector(".slider-bullets-item.slide-2");
+var productSliderBtn3 = document.querySelector(".slider-bullets-item.slide-3");
+
+var productSlide1 = document.querySelector(".slider-item.monopod");
+var productSlide2 = document.querySelector(".slider-item.wristband");
+var productSlide3 = document.querySelector(".slider-item.quadrocopter");
+
+productSliderBtn1.addEventListener("click", function (evt) {
+  productSlide2.classList.remove("active");
+  productSlide3.classList.remove("active");
+  productSlide1.classList.add("active");
+
+  productSliderBtn2.classList.remove("active");
+  productSliderBtn3.classList.remove("active");
+  productSliderBtn1.classList.add("active");
+});
+
+productSliderBtn2.addEventListener("click", function (evt) {
+  productSlide1.classList.remove("active");
+  productSlide3.classList.remove("active");
+  productSlide2.classList.add("active");
+
+  productSliderBtn3.classList.remove("active");
+  productSliderBtn1.classList.remove("active");
+  productSliderBtn2.classList.add("active");
+});
+
+productSliderBtn3.addEventListener("click", function (evt) {
+  productSlide1.classList.remove("active");
+  productSlide2.classList.remove("active");
+  productSlide3.classList.add("active");
+
+  productSliderBtn2.classList.remove("active");
+  productSliderBtn1.classList.remove("active");
+  productSliderBtn3.classList.add("active");
+});
+
+// PRODUCT SLIDER END
+
+// INFO SLIDER START
+
+var infoSliderBtn1 = document.querySelector(".info-slider-category.slide-1");
+var infoSliderBtn2 = document.querySelector(".info-slider-category.slide-2");
+var infoSliderBtn3 = document.querySelector(".info-slider-category.slide-3");
+
+var infoSlide1 = document.querySelector(".info-slider-content .slide-1");
+var infoSlide2 = document.querySelector(".info-slider-content .slide-2");
+var infoSlide3 = document.querySelector(".info-slider-content .slide-3");
+
+infoSliderBtn1.addEventListener("click", function (evt) {
+  infoSlide2.classList.remove("active");
+  infoSlide3.classList.remove("active");
+  infoSlide1.classList.add("active");
+
+  infoSliderBtn2.classList.remove("active");
+  infoSliderBtn3.classList.remove("active");
+  infoSliderBtn1.classList.add("active");
+});
+
+infoSliderBtn2.addEventListener("click", function (evt) {
+  infoSlide1.classList.remove("active");
+  infoSlide3.classList.remove("active");
+  infoSlide2.classList.add("active");
+
+  infoSliderBtn1.classList.remove("active");
+  infoSliderBtn3.classList.remove("active");
+  infoSliderBtn2.classList.add("active");
+});
+
+infoSliderBtn3.addEventListener("click", function (evt) {
+  infoSlide1.classList.remove("active");
+  infoSlide2.classList.remove("active");
+  infoSlide3.classList.add("active");
+
+  infoSliderBtn2.classList.remove("active");
+  infoSliderBtn1.classList.remove("active");
+  infoSliderBtn3.classList.add("active");
+});
+
+// INFO SLIDER END

@@ -58,7 +58,7 @@
       <h1 class="visually-hidden">Device</h1>
       <section class="container slider">
         <h2 class="visually-hidden">Популярные товары</h2>
-        <section class="slider-item monopod">
+        <section class="slider-item monopod active">
           <div class="slider-img-container">
             <img src="img/slider-1.png" width="384" height="486" alt="Делай селфи, как Бен Стиллер!">
           </div>
@@ -72,11 +72,6 @@
             </p>
             <div class="slide-buttons">
               <button type="button" class="slide-details-btn">Подробнее</button>
-              <ul class="slider-pages-buttons">
-                <li><button type="button"></button></li>
-                <li><button type="button"></button></li>
-                <li><button type="button"></button></li>
-              </ul>
             </div>
             <section class="slider-features">
               <h3 class="visually-hidden">Характеристики</h3>
@@ -112,11 +107,6 @@
             </p>
             <div class="slide-buttons">
               <button type="button" class="slide-details-btn">Подробнее</button>
-              <ul class="slider-pages-buttons">
-                <li><button type="button"></button></li>
-                <li><button type="button"></button></li>
-                <li><button type="button"></button></li>
-              </ul>
             </div>
             <section class="slider-features">
               <h3 class="visually-hidden">Характеристики</h3>
@@ -141,11 +131,6 @@
             </p>
             <div class="slide-buttons">
               <button type="button" class="slide-details-btn">Подробнее</button>
-              <ul class="slider-pages-buttons">
-                <li><button type="button"></button></li>
-                <li><button type="button"></button></li>
-                <li><button type="button"></button></li>
-              </ul>
             </div>
             <section class="slider-features">
               <h3 class="visually-hidden">Характеристики</h3>
@@ -161,9 +146,9 @@
           </div>
         </section>
         <div class="slider-bullets">
-          <div class="slider-bullets-item active"></div>
-          <div class="slider-bullets-item"></div>
-          <div class="slider-bullets-item"></div>
+          <button type="button" class="slider-bullets-item slide-1 active"></button>
+          <button type="button" class="slider-bullets-item slide-2"></button>
+          <button type="button" class="slider-bullets-item slide-3"></button>
         </div>
       </section>
       <section class="container popular-categories">
@@ -212,12 +197,12 @@
           <section class="info-slider">
             <h2 class="visually-hidden">Дополнительная информация</h2>
             <div class="info-slider-buttons">
-              <button type="button" class="info-slider-category active">Доставка</button>
-              <button type="button" class="info-slider-category">Гарантия</button>
-              <button type="button" class="info-slider-category">Кредит</button>
+              <button type="button" class="info-slider-category slide-1 active">Доставка</button>
+              <button type="button" class="info-slider-category slide-2">Гарантия</button>
+              <button type="button" class="info-slider-category slide-3">Кредит</button>
             </div>
             <div class="info-slider-content">
-              <div class="row">
+              <div class="row slide-1 active">
                 <div class="info-slider-text-column">
                   <h3 class="info-slider-heading">Доставка</h3>
                   <p class="info-slider-text">
@@ -227,7 +212,7 @@
                 <div class="info-slider-pic delivery">
                 </div>
               </div>
-              <div class="row" style="display: none;">
+              <div class="row slide-2">
                 <div class="info-slider-text-column">
                   <h3 class="info-slider-heading">Гарантия</h3>
                   <p class="info-slider-text">
@@ -237,7 +222,7 @@
                 <div class="info-slider-pic warranty">
                 </div>
               </div>
-              <div class="row" style="display: none;">
+              <div class="row slide-3">
                 <div class="info-slider-text-column">
                   <h3 class="info-slider-heading">Кредит</h3>
                   <p class="info-slider-text">
