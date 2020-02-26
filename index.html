@@ -5,14 +5,14 @@
     <title>HTML Academy: Девайс</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-min.css" rel="stylesheet">
   </head>
   <body>
     <header class="site-header container">
       <a class="header-logo"><img src="img/logo-device.svg" width="164" height="36" alt="Логотип сайта Device"></a>
       <div class="header-toolbar">
         <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-          <input type="search" name="search" placeholder="Поиск по сайту" class="search">
+          <input type="search" name="search" placeholder="Поиск по сайту" class="search" aria-label="Поиск по сайту">
           <button class="search-btn" type="submit">Найти</button>
         </form>
         <div class="header-user-area">
@@ -146,9 +146,9 @@
           </div>
         </section>
         <div class="slider-bullets">
-          <button type="button" class="slider-bullets-item slide-1 active"></button>
-          <button type="button" class="slider-bullets-item slide-2"></button>
-          <button type="button" class="slider-bullets-item slide-3"></button>
+          <button type="button" class="slider-bullets-item slide-1 active" aria-label="Слайд 1"></button>
+          <button type="button" class="slider-bullets-item slide-2" aria-label="Слайд 2"></button>
+          <button type="button" class="slider-bullets-item slide-3" aria-label="Слайд 3"></button>
         </div>
       </section>
       <section class="container popular-categories">
@@ -240,10 +240,10 @@
         <div class="container">
           <h2 class="visually-hidden">Бренды</h2>
           <ul>
-            <li><a class="dji" href="#"></a></li>
-            <li><a class="spgadgets" href="#"></a></li>
-            <li><a class="gopro" href="#"></a></li>
-            <li><a class="vive" href="#"></a></li>
+            <li><a class="dji" href="#" aria-label="Dji"></a></li>
+            <li><a class="spgadgets" href="#" aria-label="Spgadgets"></a></li>
+            <li><a class="gopro" href="#" aria-label="Gopro"></a></li>
+            <li><a class="vive" href="#" aria-label="Vive"></a></li>
           </ul>
         </div>
       </section>
@@ -288,7 +288,7 @@
             <li><a href="#">Гарантия</a></li>
             <li><a href="#">Контакты</a></li>
           </ul>
-          <p class="footer-phone">Тел.: +7 (495) 495-95-95</p>
+          <a class="footer-phone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
         </div>
         <div class="socials-wrapper">
           <div class="yellow-strip"></div>
@@ -331,6 +331,6 @@
       <img src="img/map-big.jpg" alt="Офис компании по адресу г. Москва, ул. Строителей, 15 " width="960" height="559">
       <button type="button" aria-label="Закрыть" class="modal-close"></button>
     </section>
-    <script src="js/script.js"></script>
+    <script src="js/script-min.js"></script>
   </body>
 </html>
