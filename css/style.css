@@ -598,6 +598,8 @@ img {
   display: flex;
   width: 100%;
   width: 499px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .header-user-login {
@@ -628,6 +630,8 @@ img {
   display: -ms-flexbox;
   display: flex;
   margin-top: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .about-contact-wrapper {
@@ -892,32 +896,32 @@ img {
   height: 160px;
 }
 
-.popular-category-item:nth-child(1) img {
+.popular-category-item .category-VR {
   padding-top: 52px;
   padding-left: 31px;
 }
 
-.popular-category-item:nth-child(2) img {
+.popular-category-item .category-monopods {
   padding-top: 41px;
   padding-left: 38px;
 }
 
-.popular-category-item:nth-child(3) img {
+.popular-category-item .category-action-cam {
   padding-top: 38px;
   padding-left: 49px;
 }
 
-.popular-category-item:nth-child(4) img {
+.popular-category-item .category-wristbands {
   padding-top: 50px;
   padding-left: 28px;
 }
 
-.popular-category-item:nth-child(5) img {
+.popular-category-item .category-smartwatch {
   padding-top: 32px;
   padding-left: 55px;
 }
 
-.popular-category-item:nth-child(6) img {
+.popular-category-item .category-quadrocopters {
   padding-top: 49px;
   padding-left: 13px;
 }
@@ -926,6 +930,11 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -967,6 +976,8 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .slider-features div {
@@ -1397,6 +1408,9 @@ img {
   padding-top: 20px;
   padding-bottom: 34px;
   position: absolute;
+  max-width: 1049px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .socials {
@@ -1410,7 +1424,7 @@ img {
 
 .modal-contact {
   width: 960px;
-  height: 553px;
+  min-height: 553px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -1423,15 +1437,17 @@ img {
 
 .categories-column-1 {
   padding: 0;
+  padding-right: 58px;
 }
 
 .categories-column-2 {
-  padding-left: 58px;
+  padding-right: 77px;
+  padding-left: 0;
 }
 
 .categories-column-3 {
-  padding-left: 77px;
-  margin-right: -12px;
+  padding-left: 0px;
+  padding-right: 77px;
 }
 
 .modal-close {
@@ -1467,6 +1483,8 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .contact-name-wrapper,
@@ -1484,6 +1502,7 @@ img {
 .modal-contact form {
   padding-left: 100px;
   padding-right: 100px;
+  padding-bottom: 85px;
 }
 
 .modal-contact label {
